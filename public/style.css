@@ -1,0 +1,151 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F2E8C6; /* Light beige background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #FFFFFF; /* White background */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #800000; /* Dark Red */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #982B1C; /* Medium Red */
+    font-weight: bold;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #982B1C !important; /* Medium Red */
+    color: white;
+    border: none !important;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #800000 !important; /* Dark Red */
+}
+
+/* Expenses List */
+.expenses-list {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #982B1C; /* Medium Red */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #DAD4B5; /* Beige */
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #F2E8C6; /* Light beige */
+}
+
+tfoot td {
+    border-top: 2px solid #ddd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    input, select, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.3em;
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    input, select, button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

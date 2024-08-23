@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Money Tracker App</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="expense-form" novalidate class="needs-validation" action="/add" method="POST">
+            <h1 class="mb-4">Money Tracker App</h1>
+            <div class="mb-3">
+                <label for="category_select" class="form-label">Category</label>
+                <select name="category_select" id="category_select" class="form-control" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Expense">Expense</option>
+                    <option value="Income">Income</option>
+                </select>
+                <div class="invalid-feedback">Please select a category.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="amount_input" class="form-label">Amount</label>
+                <input type="number" id="amount_input" name="amount_input" class="form-control" step="0.01" min="0.01" required>
+                <div class="invalid-feedback">Please enter a valid amount greater than 0.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="info" class="form-label">Info</label>
+                <input type="text" id="info" name="info" class="form-control" required>
+                <div class="invalid-feedback">Please enter info.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="date_input" class="form-label">Date</label>
+                <input type="date" id="date_input" name="date_input" class="form-control" required>
+                <div class="invalid-feedback">Please select a date.</div>
+            </div>
+
+            <button type="submit" id="add_btn" class="btn btn-primary">Add</button>
+        </form>
+
+        <div class="expenses-list mt-5">
+            <h2>Expenses and Incomes List</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Info</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table-body">
+                    <!-- Rows will be dynamically inserted here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total:</td>
+                        <td id="total-amount">0.00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
