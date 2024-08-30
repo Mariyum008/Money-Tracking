@@ -39,14 +39,14 @@ connectDB();
 
 // POST endpoint to add expense
 app.post("/add", async (req, res) => {
-    const { category_select, amount_input, info, date_input } = req.body;
+    const { category, amount, info, date } = req.body;
 
     // Create a new expense
     const expense = new Expense({
-        category: category_select,
-        amount: parseFloat(amount_input),
-        info: info,
-        date: new Date(date_input)
+        category,
+        amount: parseFloat(amount),
+        info,
+        date: new Date(date)
     });
 
     try {
